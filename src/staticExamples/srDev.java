@@ -31,10 +31,15 @@ public class srDev {
     public void workWithTeam(){
         System.out.println(srDev.this.name + " Is working with " + this.team.size() + " jr teams.");
         for (jrDev jr: this.team){
-            jr.work(); //jr works
+            if(!Project.isFinished){
+                jr.work();
+            }
         }
-        Project.totalProgress += this.stepPower; //Sr works
-        System.out.println("while jr team is dealing small things, sr finished the heavy lift (3)");
-        System.out.println("Current progress is: " + Project.totalProgress);
+        if (!Project.isFinished){
+            Project.totalProgress += this.stepPower; //Sr works
+            System.out.println("while jr team is dealing small things, sr finished the heavy lift (3)");
+            System.out.println("Current progress is: " + Project.totalProgress);
+        }
+
     }
 }
