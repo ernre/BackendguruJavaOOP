@@ -12,7 +12,7 @@ public class jrDev {
     public void work(){
         Project.totalProgress += this.stepPower;
         System.out.println(this.name + " has progressed " + this.stepPower +
-                " the project! New progress level is: " + Project.totalProgress);
+                " the project. New progress level is: " + Project.totalProgress);
     }
 
 }
