@@ -1,4 +1,4 @@
-package OnlineShopSimulating;
+package SaleSimulating;
 
 import java.util.HashMap;
 import java.util.ArrayList;

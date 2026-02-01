@@ -1,4 +1,4 @@
-package OnlineShopSimulating;
+package SaleSimulating;
 
 public class Product {
     String name;

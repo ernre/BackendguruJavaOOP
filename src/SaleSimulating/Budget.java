@@ -1,6 +1,4 @@
-package OnlineShopSimulating;
-
-import java.util.ArrayList;
+package SaleSimulating;
 
 public class Budget {
     // Henüz private konusunu işlemedik ancak kendim araştırıp çat pat bi şeyler öğrendim.

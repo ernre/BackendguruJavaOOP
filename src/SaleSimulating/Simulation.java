@@ -1,4 +1,4 @@
-package OnlineShopSimulating;
+package SaleSimulating;
 
 public class Simulation {
     public static void main(String[] args) {
