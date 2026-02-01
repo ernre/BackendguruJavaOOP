@@ -13,7 +13,7 @@ public class Product {
 
 class Electronic extends Product {
     int warrantyMonths;
-    public Electronic(String name, double price, int stock, int warrantyMonths) {
+    public Electronic(String name, double price, int stock) {
         super(name, price, stock);
         this.warrantyMonths = warrantyMonths;
     }
