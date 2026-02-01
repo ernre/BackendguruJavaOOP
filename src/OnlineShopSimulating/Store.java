@@ -12,12 +12,12 @@ public class Store {
     // Ürünleri kategorisine göre hash indisleme yöntemi ile tutuyoruz.
     HashMap<String, ArrayList<Product>> warehouse;
 
-    public Store (String storeName, double initialPrice) {
+    public Store (String storeName, double initialMoney) {
         this.storeName = storeName;
         this.budget = new Budget(initialMoney);
         this.warehouse = new HashMap<>();
         this.bank = new Bank();
-        this.reputation = initialPrice;
+        this.reputation = initialMoney;
 
         this.warehouse.put("Electronic", new ArrayList<>());
         this.warehouse.put("Fashion", new ArrayList<>());
@@ -41,6 +41,21 @@ public class Store {
         for (Product p : products){
             System.out.println("Ürün" + p.name + " | Stok: " + p.stock + " | Fiyat: " + p.price);
         }
+    }
+
+    public void sellProduct(String category, String productName) {
+        ArrayList<Product> products = this.warehouse.get(category);
+
+        for (Product p : products) {
+            if (p.name.equals(productName) && p.stock > 0) {
+                p.stock--; // Stoktan düş
+                this.budget.addRevenue(p.price); // Kasaya para ekle
+                this.reputation += 0.1; // Her başarılı satış itibar kazandırır
+                System.out.println(p.name + " satıldı! Kalan stok: " + p.stock);
+                return;
+            }
+        }
+        System.out.println("Ürün bulunamadı veya stok bitti!");
     }
 }
 
@@ -69,12 +84,12 @@ class OnlineStore extends Store{
     public void processSale(Product p){
         if (this.shippingOption == 1){
             this.reputation += 2.0; //ücretsiz kargo sayesinde popülerlik artacaktır
-            this.budget.addMoney(p.price * 0.8);
+            this.budget.addRevenue(p.price * 0.8);
             System.out.println("Ücretsiz kargo ile sipariş geçildi! Popülerlik arttı.");
         }
         else if (this.shippingOption == 2){
             this.reputation -= 0.5;
-            this.budget.addMoney(p.price);
+            this.budget.addRevenue(p.price);
             System.out.println("Ücretli kargo ile sipariş geçildi!");
         }
     }
