@@ -1,6 +1,5 @@
 package CoffeOrder;
 
-
 public class Coffee {
     public String type;
     public String size;
@@ -12,7 +11,8 @@ public class Coffee {
 
     // Kurucu 1
     public Coffee(String type, String size, Cup cup) {
-        this(type, size, true, false, "None", "None", cup);
+        // "None" yerine Türkçe "Yok" standardına geçildi
+        this(type, size, true, false, "Yok", "Yok", cup);
     }
 
     // Kurucu 2

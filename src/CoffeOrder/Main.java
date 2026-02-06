@@ -2,7 +2,7 @@ package CoffeOrder;
 
 public class Main {
     public static void main(String[] args) {
-        // 1. Dükkan ismini ve menüsünü görelim (Nesne üretmeden!)
+        // 1. Dükkan ismini ve menüsünü görelim
         System.out.println("Mağaza: " + CoffeeShop.shopName);
         CoffeeShop.showMenu();
 
@@ -14,12 +14,20 @@ public class Main {
 
         // 4. Farklı senaryolarda kahve üretelim
 
-        // Senaryo A: Sade Sipariş (Chaining sayesinde)
-        Coffee s1 = new Coffee("Espresso", myCup);
+        // Senaryo A: Sade Sipariş
+        Coffee s1 = new Coffee("Espresso", "Küçük", myCup); // Boyut eklendi
 
-        // Senaryo B: Tam Detaylı Sipariş
-        Coffee s2 = new Coffee("Latte", false, true, "Karamel",
-                new Cup("Plastik", "Büyük", new Straw("Kağıt")));
+        // Senaryo B: Tam Detaylı Sipariş (BUG FIXED)
+        // Sıralama: Type, Size, isHot, isDecaf, Cream, Syrup, Cup
+        Coffee s2 = new Coffee(
+                "Latte",
+                "Büyük",        // EKSİK OLAN PARAMETRE EKLENDİ
+                false,          // isHot (Soğuk)
+                true,           // isDecaf (Kafeinsiz)
+                "Süt Köpüğü",   // EKSİK OLAN KREMA EKLENDİ (Yoksa "Yok" yazılmalı)
+                "Karamel",      // Şurup
+                new Cup("Plastik", "Büyük", new Straw("Kağıt"))
+        );
 
         // 5. Özetleri yazdıralım
         s1.displayOrder();
