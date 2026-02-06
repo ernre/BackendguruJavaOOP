@@ -26,7 +26,7 @@ public class Main {
                 true,           // isDecaf (Kafeinsiz)
                 "Süt Köpüğü",   // EKSİK OLAN KREMA EKLENDİ (Yoksa "Yok" yazılmalı)
                 "Karamel",      // Şurup
-                new Cup("Plastik", "Büyük", new Straw("Kağıt"))
+                new Cup("Plastik", "Büyük", new Straw(" Kağıt"))
         );
 
         // 5. Özetleri yazdıralım

@@ -12,6 +12,6 @@ public class Cup {
     }
 
     public String getCupInfo() {
-        return size + " boy " + material + " bardak ve " + straw.getStrawInfo();
+        return size + " boy " + material + " bardak ve " + straw.getStrawInfo() ;
     }
 }

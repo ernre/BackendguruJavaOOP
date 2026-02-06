@@ -18,7 +18,7 @@ public class CoffeeShop {
     public static void showMenu() {
         System.out.println("=== GÜNCEL MENÜ ===");
         for (String item : menu) {
-            System.out.println("- " + item);
+            System.out.println("-  " + item);
         }
     }
 }

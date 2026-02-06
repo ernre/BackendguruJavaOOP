@@ -8,6 +8,6 @@ public class Straw {
     }
 
     public String getStrawInfo() {
-        return material + " pipet seçildi.";
+        return material + " pipet seçildi. ";
     }
 }

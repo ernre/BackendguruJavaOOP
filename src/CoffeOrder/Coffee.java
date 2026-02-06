@@ -39,6 +39,6 @@ public class Coffee {
         System.out.println("Sıcaklık: " + (isHot ? "Sıcak" : "Soğuk"));
         System.out.println("Ekstralar: Krema: " + cream + ", Şurup: " + syrup);
         System.out.println("Sunum: " + cup.getCupInfo());
-        System.out.println("**********************************\n");
+        System.out.println("**********************************\n" );
     }
 }
