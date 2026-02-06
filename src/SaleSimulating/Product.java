@@ -15,7 +15,7 @@ class Electronic extends Product {
     int warrantyMonths;
     public Electronic(String name, double price, int stock) {
         super(name, price, stock);
-        this.warrantyMonths = warrantyMonths;
+        // this.warrantyMonths = warrantyMonths;
     }
 }
 

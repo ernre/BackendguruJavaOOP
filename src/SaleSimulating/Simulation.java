@@ -13,6 +13,7 @@ public class Simulation {
         myStore.adProductToWarehouse("Electronic", oopCourse);
         myStore.adProductToWarehouse("Fashion", purpleShirt);
 
+        System.out.println();
         System.out.println("--- Bu Bir Satış Denemesidir ---");
         myStore.sellProduct("Electronic", "Introduction To Object Oriented Programming");
 
