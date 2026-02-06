@@ -12,6 +12,7 @@ public class CoffeeShop {
         menu.add("Cappuccino");
         menu.add("Flat White");
         menu.add("Americano");
+        // Akın hoca Türk kahvesi sevmediği için henüz eklemedik
         System.out.println("[SİSTEM] Menü başarıyla yüklendi. " + shopName + " açıldı!");
     }
 

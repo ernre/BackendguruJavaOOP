@@ -11,7 +11,6 @@ public class Coffee {
 
     // Kurucu 1
     public Coffee(String type, String size, Cup cup) {
-        // "None" yerine Türkçe "Yok" standardına geçildi
         this(type, size, true, false, "Yok", "Yok", cup);
     }
 
